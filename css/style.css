@@ -9,8 +9,9 @@ body {
 }
 
 .wrapper {
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 15px 15px;
 }
 
 header .wrapper {
@@ -94,9 +95,22 @@ h3 {
     background-color: #f8fafc;
 }
 
+#behind-the-dough .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+}
+
 #what-people-are-saying {
     background-color: #000;
     color: #fff;
+}
+
+#what-people-are-saying .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 #try-it-with .grid {
@@ -110,6 +124,10 @@ h3 {
     grid-template-areas: 
     "div1 div2 div3 div4"
     ;
+}
+
+#try-it-with .grid div {
+    background-color: #f8fafc;
 }
 
 footer {
