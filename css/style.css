@@ -15,7 +15,9 @@ body {
 }
 
 header .wrapper {
-    padding-top: 50px;
+    padding: 0;
+    padding-top: 15px;
+    padding-right: 15px;
 }
 
 nav ul {
@@ -23,6 +25,8 @@ nav ul {
     justify-content: flex-end;
     gap: 20px;
     list-style: none;
+    text-transform: uppercase;
+    align-items: flex-end;
 }
 
 nav a {
@@ -36,44 +40,63 @@ h1 {
 
 h2 {
     font-size: 1.802rem;
+    text-align: center;
 }
 
 h3 {
     font-size: 1.266rem;
 }
 
+#sweethearts-affair p:nth-of-type(1) {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 #sweethearts-affair .grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 40px;
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
     grid-template-areas: 
-    "div1 div2"
-    "div3 div4"
+    "div1 div1 div1"
+    "div1 div1 div1"
+    "div1 div1 div1"
+    "div2 div3 div4"
+    "div5 div5 div5"
     ;
 }
 
 .grid img:nth-child(1) {
     grid-area: div1;
     width: 100%;
+    border-radius: 20px;
 }
 
 .grid img:nth-child(2) {
     grid-area: div2;
     width: 100%;
+    border-radius: 20px;
 }
 
 .grid img:nth-child(3) {
     grid-area: div3;
     width: 100%;
+    border-radius: 20px;
 }
 
 .grid img:nth-child(4) {
     grid-area: div4;
     width: 100%;
+    border-radius: 20px;
+}
+
+.grid .text {
+    grid-area: div5;
+    width: 100%;
+    padding-bottom: 15px;
+    
 }
 
 .btn {
@@ -83,6 +106,7 @@ h3 {
     text-align: center;
     padding: 10px 15px;
     border-radius: 5px;
+    width: 135px;
 }
 
 .btn:hover:hover, .btn:hover:focus {
@@ -95,39 +119,38 @@ h3 {
     background-color: #f8fafc;
 }
 
-#behind-the-dough .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 40px;
-}
-
 #what-people-are-saying {
     background-color: #000;
     color: #fff;
+    text-align: left;
 }
 
 #what-people-are-saying .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    margin-left: 0;
+    padding: 0;
 }
 
 #try-it-with .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 40px;
-    width: 100%;
 
     grid-template-areas: 
-    "div1 div2 div3 div4"
+    "div1 div2"
+    "div3 div4"
     ;
+}
+
+#try-it-with img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 #try-it-with .grid div {
     background-color: #f8fafc;
+    text-align: center;
+    border-radius: 20px;
 }
 
 footer {
@@ -136,4 +159,139 @@ footer {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+@media (min-width:768px){
+    #sweethearts-affair .grid {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 420px;
+        gap: 40px;
+        width: 100%;
+
+        grid-template-areas: 
+        "div1 div2"
+        "div3 div4"
+        "div5 div5"
+        ;
+    }
+
+    .grid img:nth-child(1) {
+        grid-area: div1;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .grid img:nth-child(2) {
+        grid-area: div2;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .grid img:nth-child(3) {
+        grid-area: div3;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .grid img:nth-child(4) {
+        grid-area: div4;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .grid .text {
+        grid-area: div5;
+        width: 100%;
+    }
+
+    #behind-the-dough .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 40px;
+    }
+
+    #what-people-are-saying .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #try-it-with .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+        padding-bottom: 50px;
+        border-radius: 5px;
+
+        grid-template-areas: 
+        "div1 div2 div3 div4"
+        ;
+    }
+}
+
+@media (min-width:960px){
+    #sweethearts-affair .grid {
+        display: grid;
+        justify-content: center;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+        grid-template-areas: 
+        "div1 div2 div5 div5"
+        "div3 div4 div5 div5"
+        ;
+    }
+    
+    .grid img:nth-child(1) {
+        grid-area: div1;
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .grid img:nth-child(2) {
+        grid-area: div2;
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .grid img:nth-child(3) {
+        grid-area: div3;
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .grid img:nth-child(4) {
+        grid-area: div4;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .grid .text {
+        grid-area: div5;
+        width: 100%;
+        justify-self: start;
+    }
+
+    #try-it-with .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        padding-bottom: 50px;
+        border-radius: 5px;
+
+        grid-template-areas: 
+        "div1 div2 div3 div4"
+        ;
+    }
+
 }
